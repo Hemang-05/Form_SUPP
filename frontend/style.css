@@ -159,8 +159,8 @@ button:hover {
     opacity: 0.6;
     transition: all 0.3s;
     position: absolute;
-    right: 35%; /* Position the button to the right */
-    bottom: 25%;
+    right: 40%; /* Position the button to the right */
+    bottom: 30%;
 }
 
 .next-btn:enabled {
