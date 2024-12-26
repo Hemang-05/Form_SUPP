@@ -141,7 +141,7 @@ async function submitForm() {
     };
 
     try {
-        const BACKEND_URL = 'http://localhost:5000/api/form';
+        const BACKEND_URL = 'https://formsupp-be.onrender.com/api/form';
 
         // Example API call
         const response = await fetch(BACKEND_URL, {
