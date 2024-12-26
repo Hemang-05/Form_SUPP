@@ -258,8 +258,8 @@ button:hover {
     }
 
     .next-btn {
-        right: 20px; /* Adjust next button position for mobile */
-        bottom: 20px;
+        right: 10%; /* Adjust next button position for mobile */
+        bottom: 10%;
     }
 }
 
@@ -286,7 +286,7 @@ button:hover {
     }
 
     .next-btn {
-        right: 10px; /* Adjust next button for very small screens */
-        bottom: 10px;
+        right: 5%; /* Adjust next button for very small screens */
+        bottom: 5%;
     }
 }
