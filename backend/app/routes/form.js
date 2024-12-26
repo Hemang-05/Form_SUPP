@@ -1,4 +1,4 @@
-require('dotenv').config();
+// require('dotenv').config();
 const express = require('express');
 const supabase = require('../services/supabase');
 const router = express.Router();
@@ -43,10 +43,10 @@ router.post('/', async (req, res) => {
             return res.status(400).json({ error: error.message });
         }
         
-        const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:5500';
+        // const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:5500';
         // Generate the referral link
         const referralName = formData.name.replace(/\s+/g, ''); // Remove spaces from name
-        const referralLink = `${frontendUrl}/frontend/index.html?ref=${referralName}`;
+        const referralLink = `https://supp-form.onrender.com/frontend/index.html?ref=${referralName}`;
 
         console.log(referralName)
 
