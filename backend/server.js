@@ -13,11 +13,6 @@ app.use(bodyParser.json());
 // Routes
 app.use('/api/form', formRoutes);
 
-app.get('/', (req, res) => {
-    // Render the HTML page with BACKEND_URL injected
-    res.render('index', { BACKEND_URL: process.env.BACKEND_URL });
-});
-
 // Start the server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
