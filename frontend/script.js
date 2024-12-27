@@ -141,7 +141,7 @@ async function submitForm() {
     };
 
     try {
-        const BACKEND_URL = 'https://formsupp-be.onrender.com';
+        const BACKEND_URL = 'https://formsupp-be.onrender.com/api/form';
 
         // Example API call
         const response = await fetch(BACKEND_URL, {
