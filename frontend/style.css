@@ -40,6 +40,7 @@ body {
     cursor: pointer;
     border-radius: 5px;
     margin-top: 5%;
+    margin-left: 10%
     transition: background-color 0.3s ease;
 }
 
@@ -156,7 +157,7 @@ button:hover {
     opacity: 0.6;
     transition: all 0.3s;
     position: absolute;
-    right: 40%; /* Position the button to the right */
+    right: 20%; /* Position the button to the right */
     bottom: 30%;
 }
 
