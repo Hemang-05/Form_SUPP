@@ -143,22 +143,21 @@ async function submitForm() {
     try {
         const BACKEND_URL = 'https://formsupp-be.onrender.com/api/form';
 
-        // Example API call
         const response = await fetch(BACKEND_URL, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(formData),
-            });
-            
+        });
+
         const result = await response.json();
         if (response.ok) {
-            // Update the final message with the referral link
-            const referralLinkContainer = document.getElementById('referral-link-container');
+            // Update referral link display
             const referralLinkSpan = document.getElementById('referral-link');
-
             referralLinkSpan.textContent = result.referralLink;
+
+            const referralLinkContainer = document.getElementById('referral-link-container');
             referralLinkContainer.style.display = 'block';
         } else {
             console.error('Error:', result.error);
@@ -167,9 +166,10 @@ async function submitForm() {
     } catch (error) {
         console.error('Error:', error);
         alert('An unexpected error occurred.');
+    } finally {
+        submitButton.disabled = false; // Re-enable button regardless of outcome
     }
 }
-
 
 // Function to get referral information from the URL
 function getReferralFromURL() {
