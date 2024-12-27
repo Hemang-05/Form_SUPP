@@ -132,6 +132,7 @@ async function submitForm() {
             document.getElementById('brand2').value,
             document.getElementById('brand3').value,
         ],
+        drama1: document.querySelector('input[name="drama1"]:checked').value,
         food_preference: document.querySelector('input[name="foodPreference"]:checked').value,
         barbecue_pref: document.querySelector('input[name="barbecuePreference"]:checked').value,
         spending_cats: Array.from(
