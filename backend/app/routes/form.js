@@ -30,6 +30,7 @@ router.post('/', async (req, res) => {
                     q11: formData.q11,
                     q12: formData.q12,
                     brands: formData.brands,
+                    drama1: formData.drama1,
                     food_preference: formData.food_preference,
                     barbecue_pref: formData.barbecue_pref,
                     spending_cats: formData.spending_cats,
