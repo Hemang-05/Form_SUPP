@@ -150,15 +150,15 @@ async function submitForm() {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(formData),
-        });
+            });
 
         const result = await response.json();
         if (response.ok) {
-            // Update referral link display
-            const referralLinkSpan = document.getElementById('referral-link');
-            referralLinkSpan.textContent = result.referralLink;
-
+            // Update the final message with the referral link
             const referralLinkContainer = document.getElementById('referral-link-container');
+            const referralLinkSpan = document.getElementById('referral-link');
+
+            referralLinkSpan.textContent = result.referralLink;
             referralLinkContainer.style.display = 'block';
         } else {
             console.error('Error:', result.error);
@@ -167,8 +167,6 @@ async function submitForm() {
     } catch (error) {
         console.error('Error:', error);
         alert('An unexpected error occurred.');
-    } finally {
-        submitButton.disabled = false; // Re-enable button regardless of outcome
     }
 }
 
